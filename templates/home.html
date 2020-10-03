@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <h1>タイトル一覧</h1>
+        <div>
+            {% for i in range %}
+                <div><a href="/workspace/{{ link[i] }}">{{ titles[i]['title'] }}</a></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

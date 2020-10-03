@@ -1,0 +1,48 @@
+div.workspace-freshly {
+    width: 100%;
+    height: 300px;
+    writing-mode: vertical-rl;
+    white-space: pre-line
+}
+
+div.workspace-side {
+    width: 100%;
+    height: 300px;
+    white-space: pre-line
+}
+
+.side-area {
+    width: 20%;
+    background: greenyellow;
+    color: mediumvioletred;
+}
+
+.side-area form{
+    margin-bottom: 10%;
+}
+
+.side-area a{
+    color: mediumvioletred;
+}
+
+.main-area {
+    width: calc(100% - 200px);
+    height: 100%;
+    position: relative;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+p.text:hover {
+    background: rgba(0,100,200,0.5);
+}
+
+textarea {
+    width: 45%;
+    height: 300px;
+}

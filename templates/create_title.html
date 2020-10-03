@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>新たなストーリーの作成</h1>
+    <form method="post" action="/create_title">
+        <div>タイトル</div>
+        <div><input type="text" name="title" id="title"></div>
+        <div>作者</div>
+        <div><input type="text" name="author" id="author"></div>
+        <input type="submit" value="作成" id="create">
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='js/create_title.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h1>workspace</h1>
+    <h2 id="title">{{ title }}</h2>
+    <a href="/option">オプション</a>
+</div>
+<div>
+    <select id="writing-mode">
+        <option>縦書き</option>
+        <option>横書き</option>
+</select>
+<input type="button" value="書式" id="write-mode-button">
+</div>
+<div>
+    <div>
+        登場人物
+        <input type="submit" value="登場人物を追加する" id="create_character">
+        <b id="new_character">
+            <input type="text" id="character-name">
+            <input type="submit" value="追加" class="add-character" id="add-character">
+        </b>
+        <input type="submit" value="登場人物を削除する" id="delete_characters">
+        <b>
+            <div id="delete_characters_area"></div>
+            <input type="submit" value="削除" id="delete_character">
+        </b>
+    </div>
+    <select id="characters">
+    </select>
+</div>
+<div>
+    <div>
+        <select id="configuration">
+        <option>セリフ</option>
+        <option>ト書き</option>
+        <option>柱</option>
+        </select>
+    </div>
+    <textarea type="text" id="cell-letter" placeholder="新しいテキスト"></textarea>
+    <textarea type="text" id="edit" placeholder="テキストの編集"></textarea>
+</div>
+<hr>
+<div>
+    <div>
+        <div class="workspace-freshly" id="workspace">
+        </div>
+        <input type="submit" value="保存" id="send-button">
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='js/writting.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/edit.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/reading.js') }}"></script>
+{% endblock %}
